@@ -42,10 +42,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.csrf().disable()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.authorizeRequests().antMatchers("/").permitAll()
+				.antMatchers("/home").permitAll()
+				.antMatchers("/welcome").permitAll()
 				.antMatchers("/resources/**").permitAll()
 				.anyRequest().authenticated()
 				.and()
-				.formLogin().loginPage("/Ologin").permitAll()
+				.formLogin().loginPage("/login").permitAll()
 				.and()
 				.logout().permitAll();
 

@@ -11,7 +11,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Configuration
-@PropertySource(value = { "classpath:application.properties" })
+@PropertySource(value = { "classpath:database_config.properties" })
 public class DatabaseConfig {
 	
 	 @Autowired
@@ -24,8 +24,7 @@ public class DatabaseConfig {
 	    }
 	 
 	 @Bean
-    public DataSource dataSource()
-    {
+    public DataSource dataSource() {
 		 DriverManagerDataSource dataSource= new DriverManagerDataSource();
         dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
         dataSource.setUrl(env.getProperty("jdbc.url"));

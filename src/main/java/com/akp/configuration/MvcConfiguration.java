@@ -15,19 +15,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
-	
-@Override
-public void addViewControllers(ViewControllerRegistry registry){
-registry.addViewController("/login").setViewName("Ologin");
-registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-}
 
-/*@Override
-public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    registry.addResourceHandler("/css/**").addResourceLocations("classpath:resources/css/");
-    registry.addResourceHandler("/images/**").addResourceLocations("classpath:resources/images/");
-    registry.addResourceHandler("/js/**").addResourceLocations("/js/");
-}*/
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();

@@ -14,7 +14,7 @@ public class TokenAuthenticationService {
 
 	private static final String AUTH_HEADER_NAME = "Authorization";
     @Autowired
-    @Qualifier(value="omsTokenHandler")
+    @Qualifier(value="TokenHandler")
     private TokenHandler tokenHandler;
 
     public TokenAuthenticationService() {

@@ -4,14 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Homepage</title>
+<title>Authentication error</title>
 </head>
 <body>
-Welcome to spring boot.
-Inside Home.
-
-<br><br><br>
-<input type="submit" onclick="location.href='/login'" value="Start"/>
-
+Login error : NOT AUTHENTICATED.
 </body>
 </html>
